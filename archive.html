@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive | Siddhesh Desai</title>
+  <meta name="description" content="Full project archive - Siddhesh Desai, AI & Data Engineer">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="archive-page">
+  <div class="archive-container">
+    <a href="index.html" class="back-link"><span class="arrow">&larr;</span> Siddhesh Desai</a>
+    <h1 class="archive-title">All Projects</h1>
+    <table class="archive-table" id="archive-table">
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Project</th>
+          <th class="hide-mobile">Built at</th>
+          <th class="hide-mobile">Tech</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody id="archive-tbody"></tbody>
+    </table>
+  </div>
+  <script src="js/data.js"></script>
+  <script>
+    (function() {
+      const tbody = document.getElementById("archive-tbody");
+      if (!tbody) return;
+      const projects = PORTFOLIO_DATA.archive || [];
+      projects.forEach(function(p) {
+        const tr = document.createElement("tr");
+        tr.innerHTML =
+          "<td class='year'>" + p.year + "</td>" +
+          "<td class='project-name'>" + p.title + (p.badge ? " <span class='table-badge'>" + p.badge + "</span>" : "") + "</td>" +
+          "<td class='hide-mobile built-at'>" + (p.madeAt || "-") + "</td>" +
+          "<td class='hide-mobile tech'>" + (p.tags || []).join(" · ") + "</td>" +
+          "<td class='links'>" +
+            (p.github ? "<a href='" + p.github + "' target='_blank' rel='noopener'>GitHub</a>" : "") +
+            (p.demo ? " <a href='" + p.demo + "' target='_blank' rel='noopener'>Demo</a>" : "") +
+            (!p.github && !p.demo ? "-" : "") +
+          "</td>";
+        tbody.appendChild(tr);
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siddhesh Desai | AI & Data Engineer</title>
+  <meta name="description" content="AI & Data Engineer building scalable data pipelines and multi-agent AI systems. Experience at Coinbase, Turing, Data Axle.">
+  <meta property="og:title" content="Siddhesh Desai | AI & Data Engineer">
+  <meta property="og:description" content="Building Scalable Data Pipelines & Multi-Agent AI Systems">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <div class="layout">
+    <!-- Sticky Sidebar -->
+    <header class="sidebar" id="sidebar">
+      <div class="sidebar-inner">
+        <div class="sidebar-top">
+          <h1 class="sidebar-name"><a href="index.html">Siddhesh Desai</a></h1>
+          <h2 class="sidebar-title" id="sidebar-title"></h2>
+          <p class="sidebar-bio" id="sidebar-bio"></p>
+
+          <ul class="sidebar-socials" id="sidebar-socials"></ul>
+
+          <nav class="sidebar-nav" id="sidebar-nav">
+            <ul>
+              <li><a href="#about" class="nav-link active" data-section="about"><span class="nav-indicator"></span>About</a></li>
+              <li><a href="#experience" class="nav-link" data-section="experience"><span class="nav-indicator"></span>Experience</a></li>
+              <li><a href="#projects" class="nav-link" data-section="projects"><span class="nav-indicator"></span>Projects</a></li>
+              <li><a href="#achievements" class="nav-link" data-section="achievements"><span class="nav-indicator"></span>Achievements</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Neural Network Widget -->
+        <div class="nn-widget" id="nn-widget">
+          <label class="nn-label" for="nn-input">Find what you need</label>
+          <p class="nn-desc">Search for skills, tools, or companies - the neural network routes you to the right section.</p>
+          <div class="nn-input-wrap">
+            <input type="text" id="nn-input" class="nn-input" placeholder="Try Python, Coinbase, hackathon..." autocomplete="off" spellcheck="false">
+          </div>
+          <div class="nn-viz-box">
+            <canvas id="nn-canvas" width="380" height="240"></canvas>
+            <div class="nn-result" id="nn-hint"></div>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Mobile Header -->
+    <div class="mobile-header" id="mobile-header">
+      <a href="index.html" class="mobile-name">Siddhesh Desai</a>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+      </ul>
+    </div>
+
+    <!-- Scrollable Content -->
+    <main class="content" id="content">
+      <section id="about" class="section" data-section="about">
+        <p class="section-label">About</p>
+        <div id="about-content"></div>
+      </section>
+
+      <section id="experience" class="section" data-section="experience">
+        <p class="section-label">Experience</p>
+        <div id="experience-list"></div>
+        <div id="leadership-list"></div>
+      </section>
+
+      <section id="projects" class="section" data-section="projects">
+        <p class="section-label">Projects</p>
+        <div id="featured-projects"></div>
+        <div class="archive-link">
+          <a href="archive.html" class="inline-link">View Full Project Archive<span class="arrow">&rarr;</span></a>
+        </div>
+      </section>
+
+      <section id="achievements" class="section" data-section="achievements">
+        <p class="section-label">Achievements</p>
+        <div id="achievements-list"></div>
+      </section>
+
+      <footer class="footer">
+        <p>Loosely inspired by <a href="https://brittanychiang.com" target="_blank" rel="noopener" class="inline-link">Brittany Chiang</a>. Built with vanilla HTML, CSS & JS. Neural network runs real forward propagation in-browser.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/neural-net.js"></script>
+</body>
+</html>
