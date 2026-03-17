@@ -110,11 +110,11 @@ const PORTFOLIO_DATA = {
       image: null,
     },
     {
-      title: "CitiChain - Blockchain Banking Platform",
-      description: "Next-gen blockchain banking platform unifying traditional finance and DeFi. Engineered OneKYC with Zero-Knowledge Proofs, INR-pegged stablecoin (RupeeX), consent ledger via Merkle Trees & IPFS, and CitiGPT AI assistant. Back-to-back Citi Bank Hackathon 2025 winner.",
-      tags: ["Node.js", "React", "Solidity", "Web3", "Zero-Knowledge Proofs"],
-      github: "https://github.com/siddhesh-desai/citiChain",
-      badge: "Citi Bank Hackathon 2025 Winner",
+      title: "LegalAIBot - Multi-Agent Legal RAG Chatbot",
+      description: "Multi-agent legal RAG chatbot that answers legal queries by ingesting and reasoning over PDF documents. DataIngestor pipeline with Docling, QueryAgent with hybrid chunking, SummarizingAgent with source citations. LangSmith for tracing.",
+      tags: ["Python", "LangChain", "Pinecone", "Docling", "Streamlit"],
+      github: "https://github.com/siddhesh-desai/LegalAIBot",
+      badge: null,
       image: null,
     },
     {
